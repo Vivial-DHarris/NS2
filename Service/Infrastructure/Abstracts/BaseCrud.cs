@@ -1,7 +1,7 @@
 ﻿using Services.Infrastructure.Interfaces;
 using System;
 using System.Linq;
-using Common.Infrastructure.Interfaces;
+using Commons.Infrastructure.Interfaces;
 
 namespace Services.Infrastructure.Abstracts
 {

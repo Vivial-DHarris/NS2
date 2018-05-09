@@ -1,11 +1,11 @@
-﻿using Common.Infrastructure.Interfaces;
+﻿using Commons.Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Services.Models
 {
-    public class LocalPost : IContent, IDbRecord
+    public class LocalPost : IDbRecord, IContent, IDeal
     {
         public LocalPost(string key, string title, string description) {
             Key = key;
@@ -37,5 +37,10 @@ namespace Services.Models
             }
         }
         public string HeroImageThumb { get; private set; }
+
+        public DateTime BeginsOn { get; set; } // For query filtering only!
+        public DateTime ExpiresOn { get; set; }
+        public double OriginalCost { get; set; }
+        public double DealCost { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Common.Infrastructure.Interfaces
+namespace Commons.Infrastructure.Interfaces
 {
     public interface IContent
     {

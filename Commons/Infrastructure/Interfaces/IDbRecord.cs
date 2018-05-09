@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Common.Infrastructure.Interfaces
+namespace Commons.Infrastructure.Interfaces
 {
     public interface IDbRecord
     {

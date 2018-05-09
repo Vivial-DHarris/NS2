@@ -1,4 +1,5 @@
 ﻿using Common.Infrastructure.Interfaces;
+using Commons.Infrastructure.Interfaces;
 using Services.Models;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace NS2.Models
         }
     }
 
-    public class LocalPostDealFull : LocalPostFull
+    public class LocalPostDealFull : LocalPostFull, IDeal
     {
         public LocalPostDealFull(LocalPost dbo) : base(dbo) {
             // . . .
