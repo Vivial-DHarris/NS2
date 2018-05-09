@@ -1,0 +1,28 @@
+﻿using Common.Infrastructure.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Services.Models
+{
+    public class LocalPost : IContent, IDbRecord
+    {
+        public LocalPost(string key, string title, string description) {
+            Key = key;
+            Title = title;
+            Description = description;
+        }
+
+        // TODO: A constructor that maps a JSON object to our DataModel??
+        // Note that a Migrator function could easily be added to this as Static function
+
+        public string Key { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime LastEdited { get; set; }
+
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public HashSet<string> Keywords { get; set; }
+        public string HeroImage { get; set; }
+    }
+}
