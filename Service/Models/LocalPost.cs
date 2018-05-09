@@ -23,6 +23,19 @@ namespace Services.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public HashSet<string> Keywords { get; set; }
-        public string HeroImage { get; set; }
+
+        string _heroImage;
+        public string HeroImage {
+            get {
+                return _heroImage;
+            }
+            set {
+                _heroImage = value;
+
+                // TODO: Run compression/downsizing on the original image
+                HeroImageThumb = value;
+            }
+        }
+        public string HeroImageThumb { get; private set; }
     }
 }

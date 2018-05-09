@@ -1,4 +1,16 @@
-﻿@{
+﻿@model NS2.Models.LocalPostSimple
+
+@{
     ViewBag.Title = "Home Page";
 }
 
+<div>
+    <h1>@Model.Title</h1>
+    <p>@Model.Description</p>
+
+    <ul>
+        @foreach(var item in Model.Keywords) {
+            <li>@item</li>
+        }
+    </ul>
+</div>

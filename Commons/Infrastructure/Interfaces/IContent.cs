@@ -10,6 +10,6 @@ namespace Common.Infrastructure.Interfaces
 
         string Description { get; set; }
         HashSet<string> Keywords { get; set; }
-        string HeroImage { get; set; } 
+        string HeroImage { get; set; }
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using NS2.Models;
 using Services.Operators;
 
 namespace NS2.Controllers
@@ -12,7 +9,11 @@ namespace NS2.Controllers
         public ActionResult Index() {
             LocalPostOperator postOperator = new LocalPostOperator();
 
-            return View(postOperator.Read("example1"));
+            // By using a constructor that converts the DataModel into our ViewModel
+            //   We've controlled what actually gets sent to the Client.
+            LocalPostSimple viewModel = new LocalPostSimple(postOperator.Read("example1"));
+
+            return View(viewModel);
         }
 
         public ActionResult About() {
